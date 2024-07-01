@@ -139,14 +139,15 @@ input:focus{
 }
 .adding-but{
     position: absolute;
-    background: linear-gradient(#956bd7,#6cbafd);
+    background: var(--fields-background-color);
     width: 100px;
     height: 30px;
     border-radius: 25px;
     border: none;
     cursor: pointer;
     top: 0px;
-    right: 10px
+    right: 10px;
+    color: #fbfcfe;
 }
 @media screen and (max-width:435px) {
     .App-container{
@@ -158,6 +159,7 @@ input:focus{
         background-image: url(design/bg-mobile-dark.jpg);
         background-repeat: no-repeat;
         height: 25%;
+        background-size: cover;
     }
     .header {
         top: 8%;
