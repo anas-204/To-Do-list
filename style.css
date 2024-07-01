@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Josefin Sans;
+    user-select: none;
+}
+:root{
+    --container-background-color: #181824;
+    --header-text-color:#fbfcfe;
+    --fields-background-color:#25273c;
+    --fields-shadow-color:#0e0e16;
+    --fields-border-color:#494a65;
+    --tasks-text-color:#9193ac;
+}
+.App-container{
+    background-color: var(--container-background-color);
+    width: 75%;
+    margin: 10px auto;
+    height: 800px;
+    position: relative;
+}
+.imgcontainer{
+    background-image: url(design/bg-desktop-dark.jpg);
+    height: 300px;
+}
+.header{
+    position: absolute;
+    top: 100px;
+    color: var(--header-text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    left: 32.5%;
+}
+.subject{
+    letter-spacing: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    width: 50%;
+}
+.input-container{
+    position: absolute;
+    top: 175px;
+    width: 35%;
+    left: 32.5%;
+    background-color:var(--fields-background-color);
+    padding: 15px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+.new-todo{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+    opacity: 0.1;
+}
+input{
+    background-color:var(--fields-background-color);
+    border: none;
+    margin-left: 20px;
+    font-size: 17px;
+    width: 300px;
+    color: var(--header-text-color);
+}
+input:focus{
+    outline: none;
+}
+.mission-container{
+    position: absolute;
+    top: 250px;
+    background-color: var(--fields-background-color);
+    width: 35%;
+    left: 32.5%;
+    color:var(--tasks-text-color) ;
+    box-shadow: 0px 10px 15px var(--fields-shadow-color);
+    border-radius: 3px;
+}
+.mission-row,.details-row{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1px solid ;
+}
+.mission-row i {
+    width: 10%;
+    margin-left: 15px;
+    font-size: 19px;
+}
+.mission-row span{
+    width: 80%;
+}
+.details-row{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.1px solid var(--fields-border-color);
+    font-size: 13px;
+    color: var(--fields-border-color);
+}
+.details-row:first-child{
+    padding-left: 10px;
+}
+.details-row:first-child, .details-row:last-child{
+    cursor: pointer;
+    text-align: center;
+}
+.details-row div{
+    width: 50%;
+}
+.categories-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.details-row span:hover{
+    color:var(--header-text-color);
+}
+.fa-circle-check{
+  color: #7eb9f2;
+  opacity: 0.1;
+  cursor: pointer;
+}
+.fa-circle-check:hover{
+    opacity: 0.5;
+}
+.checked{
+    opacity: 1;
+}
+.gg-close{
+    cursor: pointer;
+}
+.adding-but{
+    position: absolute;
+    background: linear-gradient(#956bd7,#6cbafd);
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    top: 0px;
+    right: 10px
+}
+@media screen and (max-width:435px) {
+    .App-container{
+        width:100vw;
+        margin: 0px;
+    }
+    .imgcontainer{
+        width: 100%;
+        background-image: url(design/bg-mobile-dark.jpg);
+        background-repeat: no-repeat;
+        height: 25%;
+    }
+    .header {
+        top: 8%;
+        width: 85%;
+        left: 11.5%;
+        padding-top: 5px;
+    }
+    .input-container {
+        top: 160px;
+        width: 85%;
+        left: 8.5%;
+    }
+    .new-todo{
+        width:25px;
+        height:20px;
+    }
+    .mission-container {
+        top: 230px;
+        width: 85%;
+        left: 8.5%;
+    }
+    
+
+
+    
+}
+
+
+
+
